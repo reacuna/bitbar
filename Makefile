@@ -1,6 +1,6 @@
 
 PROJECT_NAME ?= BitBar
-PROJECT = $(shell find . -name '*.xcodeproj')
+PROJECT = $(shell find . -name 'BitBar.xcodeproj')
 
 all: build
 
