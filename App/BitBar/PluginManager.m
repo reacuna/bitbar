@@ -12,7 +12,6 @@
 #import "HTMLPlugin.h"
 #import "NSUserDefaults+Settings.h"
 #import "LaunchAtLoginController.h"
-#import <Sparkle/SUUpdater.h>
 
 NSString *const AppleInterfaceThemeChangedNotification = @"AppleInterfaceThemeChangedNotification";
 
@@ -110,10 +109,6 @@ NSString *const AppleInterfaceThemeChangedNotification = @"AppleInterfaceThemeCh
     
     // open at login, aka openAtLoginMenuItem
     [ADD_MENU(@"Open at Login", toggleOpenAtLogin:, nil, self) setState:_launchAtLoginController.launchAtLogin];
-    
-    [targetMenu addItem:NSMenuItem.separatorItem];
-    
-    ADD_MENU(@"Check for Updates…", checkForUpdates:, nil, [SUUpdater sharedUpdater]);
   }
   
   [targetMenu addItem:versionMenuitem];
